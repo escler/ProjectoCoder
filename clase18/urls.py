@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from AppCoder.views import crear_curso, cursos, inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),

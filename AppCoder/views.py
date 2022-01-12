@@ -1,24 +1,27 @@
 from django.shortcuts import render
+
 from django.http import HttpResponse
-from AppCoder.models import Curso
+
+from .models import Curso
 
 def crear_curso(request, camada):
     curso = Curso(nombre='Python', camada=camada)
     curso.save()
-    
-    return HttpResponse(f'Curso {curso.nombre} Creado! Camada: {camada}')
+
+    return HttpResponse(f'Curso creado! {camada}')
+
 
 def inicio(request):
-    HttpResponse('inicio')
+    return render(request, 'AppCoder/inicio.html')
 
 def cursos(request):
-    HttpResponse('cursos')
-    
+    return render(request, 'AppCoder/cursos.html')
+
 def profesores(request):
-    HttpResponse('profesores')
-    
+    return HttpResponse('profesores')
+
 def estudiantes(request):
-    HttpResponse('estudiantes')
+    return HttpResponse('estudiantes')
 
 def entregables(request):
-    HttpResponse('entregables')
+    return HttpResponse('entregables')
