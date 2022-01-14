@@ -1,9 +1,13 @@
 from django.db.models import Model
 from django.db.models.fields import BooleanField, CharField, DateField, EmailField, IntegerField
+
 # Create your models here.
 class Curso(Model):
     nombre = CharField(max_length=40)
     camada = IntegerField()
+    
+    def __str__(self):
+        return f'Curso:{self.nombre}'
     
 class Estudiante(Model):
     nombre = CharField(max_length=30)

@@ -18,10 +18,10 @@ def cursos(request):
     return render(request, 'AppCoder/cursos.html')
 
 def profesores(request):
-    return HttpResponse('profesores')
+    return render(request, 'AppCoder/profesores.html')
 
 def estudiantes(request):
-    return HttpResponse('estudiantes')
+    return render(request, 'AppCoder/estudiantes.html')
 
 def entregables(request):
-    return HttpResponse('entregables')
+    return render(request, 'AppCoder/entregables.html')
